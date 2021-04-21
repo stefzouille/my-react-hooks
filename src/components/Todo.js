@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import AddTodoForm from './AddTodoForm'
 
 const Todo = () => {
   const [todos, setTodos] = useState([
@@ -21,6 +22,7 @@ const myTodos = todos.map( todo => {
     <ul>
       {myTodos}
     </ul>
+    <AddTodoForm />
   </div>
   )
 };

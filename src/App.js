@@ -5,6 +5,7 @@ import FunctionState from "./components/FunctionState";
 import Todo from "./components/Todo";
 
 
+
 function App() {
   return (
     <div className="container">
@@ -15,6 +16,7 @@ function App() {
       <hr />
 
       <Todo />
+      
     </div>
   );
 }
