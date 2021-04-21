@@ -18,7 +18,7 @@ const myTodos = todos.map( todo => {
 {/*fct a laquelle on passe une data qui proviens de addTodoForm*/}
 const addNewTodo = (newTodo) => {
     setTodos([...todos, {
-        id: uuid(),
+        id: uuid(),     {/*what fck error */}
         todo: newTodo
     
 
