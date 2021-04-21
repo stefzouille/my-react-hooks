@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+//import uuid from "uuid";
 import AddTodoForm from './AddTodoForm'
+let { uuid } = require("uuid")
 
 const Todo = () => {
   const [todos, setTodos] = useState([
@@ -13,16 +15,25 @@ const myTodos = todos.map( todo => {
     <li className="list-group-item" key={todo.id}>{todo.todo}</li>
   )
 })
+{/*fct a laquelle on passe une data qui proviens de addTodoForm*/}
+const addNewTodo = (newTodo) => {
+    setTodos([...todos, {
+        id: uuid(),
+        todo: newTodo
+    
+
+    }])
+}
 
   return (
   
   <div>
     <h1 className='text-center'> {todos.length }To-do</h1>
 
-    <ul>
+    <ul className="list-group">
       {myTodos}
     </ul>
-    <AddTodoForm />
+    <AddTodoForm addNewTodo={addNewTodo} />
   </div>
   )
 };
