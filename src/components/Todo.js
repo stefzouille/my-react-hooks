@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 //import uuid from "uuid";
 import AddTodoForm from './AddTodoForm'
-let { uuid } = require("uuid")
+const { uuid } = require("uuid")
 
 const Todo = () => {
   const [todos, setTodos] = useState([
@@ -18,7 +18,8 @@ const myTodos = todos.map( todo => {
 {/*fct a laquelle on passe une data qui proviens de addTodoForm*/}
 const addNewTodo = (newTodo) => {
     setTodos([...todos, {
-        id: uuid(),     {/*what fck error */}
+       /*what fck error */
+        id: uuid(),    
         todo: newTodo
     
 
